@@ -35,7 +35,3 @@ const draw = () => {
 }
 
 setInterval(draw, 60)
-
-window.onresize = function () {
-  location.reload()
-}
