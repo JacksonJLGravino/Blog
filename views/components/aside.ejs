@@ -1,0 +1,13 @@
+<aside class="show">
+  <div class="aside-title">
+    <h6>Todas as publicações</h6>
+    <button onclick="asideSwitch()">
+      <img src="/img/xVector.svg" alt="" />
+    </button>
+  </div>
+  <div class="all-posts">
+    <%for (let i = 0; i < asidePost.length; i++){ %>
+    <a href="/article/<%- asidePost[i].slug %>"><%= asidePost[i].titulo %></a>
+    <% } %>
+  </div>
+</aside>

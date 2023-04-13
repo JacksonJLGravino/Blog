@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/img/faviconJ.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Blog Jackson Gravino</title>
+  </head>
+  <body>
+    <%- include('components/header.ejs') %>
+
+    <main>
+      <section class="background-article">
+        <div class="article-box">
+          <div class="article-header">
+            <a class="voltar" href="/">
+              <img src="/img/caretLeft.svg" alt="" />
+              <span>voltar</span>
+            </a>
+            <h3><%= noticia.titulo %></h3>
+          </div>
+          <div class="article-content"><%- noticia.conteudo %></div>
+        </div>
+      </section>
+    </main>
+
+    <%- include('components/footer.ejs') %>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/img/faviconJ.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Blog Jackson Gravino</title>
+  </head>
+  <body>
+    <%- include('components/header.ejs') %>
+    <main>
+      <section class="perfil"><%- include('components/perfil.ejs') %></section>
+
+      <section class="post-section">
+        <div class="post-center">
+          <%- include('components/aside.ejs') %>
+          <div class="posts-info">
+            <%- include('components/formBusca.ejs') %>
+            <div>
+              <button onclick="asideSwitch()" class="btn-list-open">
+                <img src="/img/textIndent.svg" alt="" /> Acessar todas as
+                publicações
+              </button>
+              <div class="content-header">
+                <h5>Voce buscou: <%= busca %></h5>
+                <span>encontrados: <%= contagem %></span>
+              </div>
+            </div>
+
+            <div class="posts">
+              <div class="posts">
+                <%for (let i = 0; i < posts.length; i++){ %>
+                <a href="/article/<%= posts[i].slug %>" class="post">
+                  <div class="post-header">
+                    <h5><%= posts[i].titulo %></h5>
+                  </div>
+                  <p><%- posts[i].conteudo %></p>
+                </a>
+                <% } %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <%- include('components/footer.ejs') %>
+    <script src="/perfilBackground.js"></script>
+    <script src="/asideSwitch.js"></script>
+  </body>
+</html>

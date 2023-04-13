@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/img/faviconJ.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/adminStyle.css" />
+    <title>Painel do Admin Blog</title>
+  </head>
+  <body>
+    <header>
+      <div class="center">
+        <a href="/">Pagina Inicial</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="center">
+        <div class="editor">
+          <button onclick="adicionarTitulo()">Titulo</button>
+          <button onclick="adicionarTexto()">Texto</button>
+          <button onclick="adicionarCode()">Code</button>
+          <button onclick="adicionarPre()">Pre</button>
+        </div>
+
+        <div class="exemplo-post">
+          <form action="/admin/cadastro" id="postArticle" method="post">
+            <div class="form-header">
+              <input
+                type="text"
+                name="titulo_noticia"
+                placeholder="Titulo da Noticia"
+              />
+              <input type="text" name="slug" na placeholder="Slug" />
+            </div>
+
+            <textarea
+              name="noticia"
+              id="postText"
+              placeholder="escreva aqui..."
+            ></textarea>
+          </form>
+          <div class="botoes">
+            <button class="" type="submit" form="postArticle">Salvar</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="center">
+        <%for (let i = 0; i < posts.length; i++){ %>
+        <div class="article-info">
+          <div class="article-single">
+            <h4><%= posts[i].titulo %></h4>
+            <span>Views: <%= posts[i].views %></span>
+          </div>
+        </div>
+        <% } %>
+      </section>
+    </main>
+    <script src="/textEdit.js"></script>
+  </body>
+</html>

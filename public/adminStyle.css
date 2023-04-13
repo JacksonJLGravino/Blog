@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Tinos&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Fundo: #2c3e50;
+  --Cinza-Claro: #e9ebee;
+  --Contraste: #55efc4;
+  --Primario: #192a56;
+  --Cinza-Escuro: #636e72;
+  --Headline: 'Inter', sans-serif;
+  --Text: 'Tinos', serif;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  background: var(--Fundo);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.7);
+  background: var(--Primario);
+}
+
+/*Login*/
+.login{
+  background: var(--Fundo);
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.login form{
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  gap: 12px;
+  padding: 32px;
+  border: 2px solid var(--Cinza-Escuro);
+  border-radius: 16px;
+}
+
+.login-text{
+  border: none;
+  outline: none;
+  padding: 4px;
+  background: var(--Cinza-Escuro);
+  border-radius: 4px;
+  font-family: var(--Text);
+  color: var(--Cinza-Claro);
+}
+
+.login-btn{
+  background: var(--Primario);
+  color: var(--Cinza-Claro);
+  padding-block: 4px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-weight: 400;
+  font-family: var(--Headline);
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+/*Painel*/
+header{
+  background: var(--Fundo);
+  border-bottom: 1px solid var(--Contraste);
+}
+
+.center {
+  max-width: 1144px;
+  margin-inline: auto;
+  padding-inline: 16px;
+  padding-block: 16px;
+}
+
+.center a{
+  color: var(--Cinza-Claro);
+  text-decoration: none;
+  font-family: var(--Headline);
+  font-size: 18px;
+}
+
+.main{
+  background: var(--Fundo);
+}
+
+.editor{
+  display: flex;
+  gap: 8px;
+}
+
+.editor button, .botoes button{
+  padding: 8px;
+  border-radius: 4px;
+  background: var(--Primario);
+  border: none;
+  outline: none;
+  color: var(--Cinza-Claro);
+  font-size: 16px;
+  font-family: var(--Headline);
+  cursor: pointer;
+}
+
+.exemplo-post{
+  margin-top: 80px;
+  border: 2px solid var(--Cinza-Escuro);
+  border-radius: 16px;
+  padding: 0 32px 32px 32px;
+}
+
+.form-header{
+  display: flex;
+  background: var(--Primario);
+  flex-direction: column;
+  padding: 32px;
+  gap: 16px;
+  position: relative;
+  transform: translateY(-50%);
+  border-radius: 16px;
+  margin-inline: 64px;
+  max-width: 904px;
+}
+
+.texto-editavel, 
+.texto-nao-editavel{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--Cinza-Claro);
+}
+
+.texto-editavel h4, 
+.texto-nao-editavel h4{
+  font-size: 24px;
+  font-family: var(--Headline);
+}
+
+.texto-editavel p, 
+.texto-editavel pre, 
+.texto-editavel code, 
+.texto-nao-editavel p, 
+.texto-nao-editavel pre, 
+.texto-nao-editavel code{
+  font-size: 16px;
+  font-family: var(--Text);
+}
+
+.texto-nao-editavel pre{
+  background: black;
+  padding: 12px;
+}
+
+.botoes{
+  display: flex;
+  margin-top: 32px;
+  gap: 16px;
+}
+
+textarea{
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--Contraste);
+  background: var(--Fundo);
+  font-size: 16px;
+  font-family: var(--Text);
+  resize: none;
+  height: 420px;
+  color: var(--Cinza-Claro);
+}
+
+.article-info{
+  margin-block: 16px;
+  border: 1px solid var(--Cinza-Escuro);
+  padding-inline: 8px;
+  padding-block: 16px;
+  color: var(--Cinza-Claro);
+  border-radius: 8px;
+}
+
+.article-single{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.article-single h4{
+  font-size: 24px;
+  font-weight: 400;
+  font-family: var(--Headline);
+}
+
+.article-single code{
+  font-family: var(--Text);
+  font-size: 14px;
+}
